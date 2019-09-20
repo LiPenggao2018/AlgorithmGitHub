@@ -23,8 +23,7 @@ public:
 	int nodeHeight(Tree<T>*node);                                           //重先设置当前节点树的所有节点的高度                       
 	Tree<T> *getRoot();
 	void setRoot(Tree<T> *rootNode);
-
-	int max(int a, int b);
+	int max(int a, int b);                                         //求最大
 private:
 	Tree<T> *root;                                                                        //AVL树也是二叉搜索树，所有需要定义一个根结点
 };

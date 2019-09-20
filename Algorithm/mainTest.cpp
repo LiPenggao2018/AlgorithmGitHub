@@ -2,7 +2,7 @@
   在这里进行算法函数的测试
   
 *******************************************************/
-#include"Algorithm.h"
+#include"Algorihtm.h"
 #include"ScientificCalculator.h"
 #include"ScientificCalculator.cpp"
 #include"BinarySearchTree.h"
@@ -10,7 +10,6 @@
 #include"PriorityBinaryHeap.h"
 #include"PriorityBinaryHeap.cpp"
 #include"PriorityHeapApplication.cpp"
-#include"GreedyAlgorithm.h"
 #include<map>
 #include<queue>
 #include<set>
@@ -19,42 +18,54 @@
 #include"AVLTree.h"
 #include"AVLTree.cpp"                                                                               //特注：在定义模板类时，.h 和 .cpp 文件要同时包含，
 #include"Graph.cpp"                                                                                        //因为只有.cpp文件中定义的才是具体的类的实现，而.h中定义的只是模板
-using namespace std;                                                                                                               //所以必须包含.cpp文件
-                                                                                                                      //这也是为什么模板中可以用内敛函数，因为在.h中就实现了具体的模板
-//*****************************************************
+#include"Test.h"
+#include <windows.h>                   //注：必须要加window.h，且必须在最前面
+#include <GL/gl.h>  
+#include <GL/glu.h>  
+#include <GL/glut.h>  
+#include <cstdlib>  
+#include <cstdio>  
+#include <cmath>  
+
+//************************************************************************************
+//************************************************************************************
+/*void display(void)
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1.0, 0, 1.0);
+	glRectf(25.0, 25.0, 125.0, 125.0);
+	glRectf(225.0, 25.0, 325.0, 125.0);
+	glDisable(GL_POLYGON_STIPPLE);
+	glFlush();
+}
+
+void init(void){
+	glClearColor(1.0, 1.0, 1.0, 1.0);
+	glShadeModel(GL_FLAT);
+}
+
+void reshape(int w, int h){
+	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0.0, (GLdouble)w, 0.0, (GLdouble)h);
+}
+
+int main(int argc, char** argv){
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(1000, 800);
+	glutCreateWindow(argv[0]);
+	init();
+	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
+	glutMainLoop();
+	return 0;
+}*/
+
 
 void main()
 {
-	GreedyAlgorithm greedyAlgorithm;
-	map<string, set<string>>broadcast;
-	vector<string>rural;
-	rural = { "ID"," NV", "UT", "WA", "MT", "OR", "CA", "AZ"};
-	set<string>setk1, setk2, setk3, setk4, setk5;
-	setk1.insert("ID");
-	setk1.insert("NV");
-	setk1.insert("UT");
-	broadcast.insert(map<string, set<string>>::value_type("k1", setk1));
-
-	setk2.insert("WA");
-	setk2.insert("ID");
-	setk2.insert("MT");
-	broadcast.insert(map<string, set<string>>::value_type("k2", setk2));
-
-	setk3.insert("OR");
-	setk3.insert("NV");
-	setk3.insert("CA");
-	broadcast.insert(map<string, set<string>>::value_type("k3", setk3));
-
-	setk4.insert("UT");
-	setk4.insert("NV");
-	broadcast.insert(map<string, set<string>>::value_type("k4", setk4));
-
-	setk5.insert("CA");
-	setk5.insert("AZ");
-	broadcast.insert(map<string, set<string>>::value_type("k5", setk5));
-
-	cout<<greedyAlgorithm.setCover(broadcast, rural)[0];
-	//------------------------------------------------------------------------
 	/*SortAndFind<int> sortAndFind;                                                       //定义为整型的模板类
 	vector<int> nums;
 	nums = { 5, 7, 9, 2, 4,113,8, 1,2,4,2, 1, 3 ,78,56,13,44};
@@ -230,12 +241,12 @@ void main()
 	   node->setData(data);
 	   avlTree.setRoot(node);
 	   int flag = 0;
-	   while (data)                               //
+	   while (data)                                           //
 	   {
-	   if (flag == 0)
+		 if (flag == 0)
 	   {
-	   cin >> data;
-	   flag = 1;
+		cin >> data;
+		flag = 1;
 	   }
 	   avlTree.insertAVLnode(data, avlTree.getRoot());                             //0也会被插入进来
 	   avlTree.visitAVLSearchTree(avlTree.getRoot());
@@ -288,9 +299,30 @@ void main()
 	/*Graph<int> graph;                                     //定义一个图类对象
 	*/
 	//------------------------------------------------------------------------------------------------------------------------
-
-
+/* 
+	//邻接节点进行存储
+	Graph<string> graph;
+	graph.buildGraphNode();                                         //无权值可看着权值为1
+	graph.BFSGraph(graph);
+	//graph.topSort(graph);
+	vector<Vertex<string>*>sssp;
+	string s, p;
+	cout << "please input s and p with weight:";
+	cin >> s;
+	cin >> p;
+	//sssp = graph.unweightedShortestPath(graph, s, p);
+	sssp = graph.weightedShortestPathDijkstra(graph, s, p);
+	cout << s << " 到" << p << "的最短路径为：" << endl;
+	for (int i = 0; i < sssp.size(); i++)
+	{
+		cout << sssp[i]->getData()<<"->";
+	}
 //********************************************************************************
-	cout << endl;
+*/
+
+	Test *t1 = new Test();  
+	t1->testAdvancedAlgorithm.testDivideMerge->testPolynomialsMultiply();
+
+    cout << endl;
 	system("pause");
 }

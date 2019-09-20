@@ -315,6 +315,7 @@ void SortAndFind<T>::radixSort(vector<T>&nums)
 	int s = 0;
 	//二维则使用push_back();
 	int remainder = 0;                         //余数
+	int t=10;
 	int k = 1;
 	int flag = 1;
 	while (flag)

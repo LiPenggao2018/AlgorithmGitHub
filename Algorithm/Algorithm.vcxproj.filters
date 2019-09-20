@@ -13,8 +13,29 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\testClass">
+      <UniqueIdentifier>{a1ea3261-2d20-42f1-ac73-c5347827beda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\testClassCpp">
+      <UniqueIdentifier>{80197f96-cedb-410d-98ea-01d77d2fdcc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\advancedAlgorithm">
+      <UniqueIdentifier>{60f1aef3-288b-44d7-bd7e-c1f30373ec09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\advancedAlgorithmCpp">
+      <UniqueIdentifier>{c6a19022-7b33-426b-8e55-5feb1071d756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\testClass\testDivideMerge">
+      <UniqueIdentifier>{d8b5da0f-f33b-467d-900c-59012eb6249e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\testClassCpp\testDivideMergeCpp">
+      <UniqueIdentifier>{61840269-765f-45fb-9db6-5cbee5392eb6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorihtm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="ScientificCalculator.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -48,11 +69,20 @@
     <ClInclude Include="EdgeWeight.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Algorithm.h">
+    <ClInclude Include="Test.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="GreedyAlgorithm.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="TestAdvancedAlgorithm.h">
+      <Filter>头文件\testClass</Filter>
+    </ClInclude>
+    <ClInclude Include="DivideMerge.h">
+      <Filter>头文件\advancedAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDivideMerge.h">
+      <Filter>头文件\testClass\testDivideMerge</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>头文件\advancedAlgorithm</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -92,7 +122,19 @@
     <ClCompile Include="EdgeWeight.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GreedyAlgorithm.cpp">
+    <ClCompile Include="TestAdvancedAlgorithm.cpp">
+      <Filter>源文件\testClassCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DivideMerge.cpp">
+      <Filter>源文件\advancedAlgorithmCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDivideMerge.cpp">
+      <Filter>源文件\testClassCpp\testDivideMergeCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

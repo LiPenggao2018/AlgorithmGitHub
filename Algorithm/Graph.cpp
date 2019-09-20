@@ -391,7 +391,7 @@ vector<Vertex<T>*>Graph<T>::weightedShortestPathDijkstra(Graph<T>graph, T s, T p
 {
 	Vertex<T> *v;
 	v = findVertexNode(graph, s);                                                                                        //源节点
-	if (v)                                                                                                                                  //查找V的单源最短路径算法
+	if (v)                                                                                                               //查找V的单源最短路径算法
 	{
 		queue<Vertex<T>*> nodeQueue;
 		vector<Vertex<T>*>checkNode;
